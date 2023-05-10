@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <script src="main.js"></script>
+    <style>
+      /* Bordered form */
+      form {
+        border: 3px solid #f1f1f1;
+      }
+
+      /* Full-width inputs */
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      /* Set a style for all buttons */
+      button {
+        background-color: #db820e;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      #login-button {
+        margin: 8px 0;
+      }
+
+      /* Add a hover effect for buttons */
+      button:hover {
+        opacity: 0.8;
+      }
+
+      /* Create Account Button */
+      .bottombtn {
+        width: auto;
+        padding: 10px 18px;
+      }
+
+      /* Add padding to containers */
+      .container {
+        padding: 16px;
+      }
+
+      /* The "Forgot password" button*/
+      .frgtpsw {
+        float: right;
+      }
+
+      /* Change styles for span and cancel button on extra small screens */
+      @media screen and (max-width: 300px) {
+        span.psw {
+          display: block;
+          float: none;
+        }
+        .cancelbtn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="employee.html">Employee</a></li>
+          <li><a href="employer.html">Employer</a></li>
+          <li><a href="login.html">Login</a></li>
+          <!--Will switch to "account" when logged in-->
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--Section includes the sign in page-->
+      <section id="logged-out-box">
+        <h1 style="text-align: center" id="title-text">Sign In</h1>
+        <!--Sign In Text-->
+        <form method="get">
+          <!--Form Inclues, Username, Password and Login-->
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <!--Username Text-->
+            <input
+              type="text"
+              placeholder="Enter Username"
+              name="uname"
+              id="unameInput"
+              required />
+            <!--Username Text Field-->
+
+            <label for="psw"><b>Password</b></label>
+            <!--Password Text-->
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              id="passInput"
+              required />
+            <!--Password Text Field-->
+
+            <button id="login-button">Login</button>
+            <!--Login Submit Button-->
+          </div>
+        </form>
+        <div class="container" style="background-color: #f1f1f1">
+          <form method="get">
+            <!--Form Includes Forgot Password, and Create Account
+            -->
+            <!--Forgot Password Button-->
+            <span class="frgtpsw"><button>Forgot password?</button></span>
+            <!--Create Account Button-->
+            <span>
+              <button onclick="createAccount()" type="button" class="bottombtn">
+                Create account?
+              </button>
+            </span>
+          </form>
+        </div>
+      </section>
+
+      <section id="create-account-box">
+        <h1 style="text-align: center">Create Account</h1>
+        <form action="#" method="post">
+          <div class="container">
+            <label for="email"><b>Email</b></label>
+            <input
+              type="email"
+              placeholder="Enter Email"
+              name="uname"
+              required />
+            <label for="uname"><b>Username</b></label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              name="uname"
+              required />
+
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              required />
+
+            <button type="submit">Create</button>
+          </div>
+
+          <div class="container" style="background-color: #f1f1f1">
+            <form method="get">
+              <!--Sign In Button-->
+              <span>
+                <button onclick="signIn()" type="button" class="bottombtn">
+                  Sign In?
+                </button>
+              </span>
+            </form>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <a href="#"><h5>Contact Us</h5></a>
+    </footer>
+  </body>
+</html>

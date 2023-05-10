@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Home Page</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <script src="index.js"></script>
+    <style>
+      #application-zone {
+        position: relative;
+        left: 30%;
+      }
+      #title-card {
+        margin-top: 20px;
+        margin-bottom: 2px;
+        background-color: #ffffff;
+        border: 2px solid #d8d8d8;
+        width: 25%;
+        left: 0;
+        text-align: center;
+      }
+      #offering {
+        background-color: #ffffff;
+        border: 2px solid #d8d8d8;
+        width: 250px;
+        margin: 20px;
+        padding-bottom: 20px;
+        float: left;
+      }
+      #offering h5 {
+        padding-left: 15px;
+        margin-bottom: 5px;
+      }
+      #company_title {
+        margin-top: 5px;
+      }
+      #offering h3 {
+        padding-left: 15px;
+        margin-bottom: 0;
+      }
+      #offering p {
+        padding-left: 15px;
+        margin: 0;
+        color: #6d6d6d;
+        font-size: 14px;
+      }
+      .label {
+        margin-bottom: 10px;
+      }
+      #create-offering {
+        width: 25%;
+        margin-right: 0;
+      }
+      input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      .column {
+        width: 30%;
+        float: left;
+      }
+      #offering a:link,
+      #offering :visited {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        border: 2px solid #d8d8d8;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        left: 30%;
+        margin-top: 12px;
+      }
+
+      #offering a:hover,
+      #offering a:active {
+        background-color: #d8d8d8;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="employee.html">Employee</a></li>
+          <li><a href="employer.html">Employer</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      <section id="title-card">
+        <h1>Looking for Jobs?</h1>
+      </section>
+    </header>
+    <main>
+      <div class="column">
+        <form id="create-offering" autocomplete="off">
+          <fieldset>
+            <legend>Create a offering for a position</legend>
+
+            <label for="job-title">Job Title:</label> <br />
+            <input type="text" id="jobTitleInput" name="job-title" />
+
+            <br />
+
+            <label for="company-name">Company Name:</label> <br />
+            <input type="text" id="companyNameInput" name="company-name" />
+
+            <br />
+
+            <label for="avalibility"
+              >Avaliability (hours needed, part/full time):</label
+            >
+            <br />
+            <input type="text" id="avaliability-input" name="avalibility" />
+
+            <br />
+
+            <label for="job-description">Describe The Job:</label>
+            <br />
+            <textarea
+              rows="4"
+              cols="50"
+              id="jobDescriptionInput"
+              name="job-description-input"></textarea>
+
+            <br />
+
+            <label for="requirements">Requirements needed for the job:</label>
+            <br />
+            <textarea
+              rows="4"
+              cols="50"
+              id="requirementsInput"
+              name="requirements"></textarea>
+
+            <label for="preferred"
+              >Preferred skills/credentials for the job:</label
+            >
+            <br />
+            <textarea
+              rows="4"
+              cols="50"
+              id="preferredInput"
+              name="preferred"></textarea>
+
+            <br />
+            <label for="apply-button"
+              >"Apply" button directs them to? (Application URL)</label
+            >
+            <input type="text" id="applyButtonInput" />
+            <button type="button" onclick="loadOffering()">
+              Create Application
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <div id="main" style="float: left"></div>
+    </main>
+  </body>
+</html>
